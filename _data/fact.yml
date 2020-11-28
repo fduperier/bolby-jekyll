@@ -1,0 +1,16 @@
+# Fact template
+- title: Projects completed
+  count: 198
+  icon: icon-fire
+
+- title: Cup of coffee
+  count: 0
+  icon: icon-cup
+
+- title: Satisfied clients
+  count: 427
+  icon: icon-people
+
+- title: Nominees winner
+  count: 35
+  icon: icon-badge

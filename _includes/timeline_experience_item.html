@@ -1,0 +1,33 @@
+<!-- timeline item -->
+<div class="timeline-container wow fadeInUp" data-wow-delay="{{ 0.2 | times:forloop.index0 }}s">
+  <div class="content">
+    <span class="time">{{ include.item.dates }}</span>
+    <div class="row">
+      <div class="col-md-4">
+        {%- if include.item.customer -%}
+        <h3 class="customer">
+          {{ include.item.customer }}<br/>
+          <small class="text-muted company">via {{ include.item.company }}</small>
+        </h3>
+        {%- elsif include.item.company -%}
+        <h3 class="company">
+          {{ include.item.company }}
+          {%- if include.item.note -%}
+            <br/><small class="text-muted note">{{ include.item.note }}</small>
+          {%- endif -%}
+        </h3>
+        {%- endif -%}
+        {%- if include.item.link -%}
+        <em>
+          <a href="{{ include.item.link }}" target="_blank" class="link">{{ include.item.link }}</a>
+        </em>
+        {%- endif -%}
+        {%- if include.item.location -%}<p>{{ include.item.location }}</p>{%- endif -%}
+      </div>
+      <div class="col-md-8">
+        {%- if include.item.job_title -%}<h3>{{ include.item.job_title }}</h3>{%- endif -%}
+        {{ include.item.description | strip | markdownify }}
+      </div>
+    </div>
+  </div>
+</div>

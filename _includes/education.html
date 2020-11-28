@@ -1,0 +1,34 @@
+
+<!-- section experience -->
+<section id="education">
+
+  <div class="container">
+
+    <!-- section title -->
+    <h2 class="section-title wow fadeInUp">{{ site.educaton_title | default: "Education" }}</h2>
+
+    <div class="spacer" data-height="60"></div>
+
+    <div class="row">
+
+      <div class="col-md-12">
+
+        <!-- timeline wrapper -->
+        <div class="timeline edu bg-white rounded shadow-dark padding-30 overflow-hidden">
+
+          {%- for education in site.data.education -%}
+            {%- include {{ education.layout | default: 'timeline_item' | append: ".html" }} item=education -%}
+          {%- endfor -%}
+
+          <!-- main line -->
+          <span class="line"></span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

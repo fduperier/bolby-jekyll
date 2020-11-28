@@ -1,1 +1,52 @@
-{{ content }}
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+
+{%- include head.html -%}
+
+<body>
+  <script src="assets/js/custom.js"></script>
+
+  {%- include preloader.html -%}
+
+  {%- include header.html -%}
+
+  <!-- main layout -->
+  <main class="content" aria-label="Content">
+
+    {%- if jekyll.environment == 'production' and site.gtm -%}
+      {%- include gtm_body.html -%}
+    {%- endif -%}
+
+    {%- include home.html -%}
+
+    {%- include about.html -%}
+
+    {%- if site.data.service.size > 0 -%}
+      {%- include services.html -%}
+    {%- endif -%}
+
+    {%- if site.data.experience.size > 0 -%}
+      {%- include experience.html -%}
+    {%- endif -%}
+
+    {%- if site.data.education.size > 0 -%}
+      {%- include education.html -%}
+    {%- endif -%}
+
+    {%- if site.data.work.size > 0 -%}
+      {%- include works.html -%}
+    {%- endif -%}
+
+    {%- if site.data.testimonial.size > 0 or site.data.client.size > 0 -%}
+      {%- include testimonials.html -%}
+    {%- endif -%}
+
+    {%- include contact.html -%}
+
+    <div class="spacer" data-height="96"></div>
+  </main>
+
+  {%- include footer.html -%}
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+# Service template
+- title: My Service
+  picture: https://via.placeholder.com/80x80
+  description: Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo ligula eget.
+  style_class: text-light shadow-blue
+  color: '#6C6CE5'
+
+- title: My Service
+  picture: https://via.placeholder.com/80x80
+  description: Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo ligula eget.
+  style_class: shadow-yellow
+  color: '#F9D74C'
+
+- title: My Service
+  picture: https://via.placeholder.com/80x80
+  description: Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo ligula eget.
+  style_class: text-light shadow-pink
+  color: '#F97B8B'

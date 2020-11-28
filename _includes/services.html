@@ -1,0 +1,40 @@
+
+<!-- section services -->
+<section id="services">
+
+  <div class="container">
+
+    <!-- section title -->
+    <h2 class="section-title wow fadeInUp">{{ site.service_title | escape | default: "Services" }}</h2>
+
+    <div class="spacer" data-height="60"></div>
+
+    <div class="row">
+
+      {%- for service in site.data.service -%}
+      <div class="col-md-4">
+        <!-- service box -->
+        <div class="service-box rounded data-background padding-30 text-center {{ service.style_class}}" data-color="{{ service.color }}">
+          <img src="{{ service.picture | relative_url }}" alt="{{ service.title }}" />
+          <h3 class="mb-3 mt-0">{{ service.title | escape }}</h3>
+          <p class="mb-0">{{ service.description | escape }}</p>
+        </div>
+        {%- unless forloop.last -%}
+        <div class="spacer d-md-none d-lg-none" data-height="30"></div>
+        {%- endunless -%}
+      </div>
+      {%- endfor -%}
+
+    </div>
+
+    <div class="mt-5 text-center">
+      <p class="mb-0">
+        {{ site.service_subtitle | escape }}
+        <a href="{{ site.service_link }}">{{ site.service_action | escape }}</a>
+        {{ site.service_action_unlinked | escape }}
+      </p>
+    </div>
+
+  </div>
+
+</section>
