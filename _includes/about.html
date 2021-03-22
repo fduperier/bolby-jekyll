@@ -38,10 +38,9 @@
               <div class="skill-item">
                 <div class="skill-info clearfix">
                   <h4 class="float-left mb-3 mt-0">{{ skill.name | escape }}</h4>
-                  <span class="float-right">{{ skill.value | escape }}%</span>
                 </div>
                 <div class="progress">
-                  <div class="progress-bar data-background" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{ skill.value }}" data-color="{{ skill.color }}">
+                  <div class="progress-bar data-background" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100" data-color="{{ skill.color }}">
                   </div>
                 </div>
                 {%- unless forloop.last -%}
