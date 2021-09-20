@@ -1,5 +1,7 @@
 # Skill template
 - name: Skill 1
-  value: 85
+  value: 40
   color: FFD15C
+
 - name: Skill 2
+  value: 80
